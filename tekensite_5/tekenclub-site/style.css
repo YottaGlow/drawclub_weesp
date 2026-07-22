@@ -1,0 +1,369 @@
+  :root{
+    --paper:#F2EEE4;
+    --paper-sheet:#FBF8F1;
+    --ink:#2A2622;
+    --ink-soft:#5b534b;
+    --tape:rgba(236,217,168,.62);
+    --tape-edge:rgba(199,176,124,.55);
+    --coral:#E8543E;
+    --mustard:#F2B33D;
+    --teal:#2FA39A;
+    --blueberry:#4E63C8;
+    --berry:#D8568C;
+    --Weesperblauw:#0036A7;
+    --shadow:0 10px 24px rgba(42,38,34,.14), 0 2px 6px rgba(42,38,34,.10);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(42,38,34,.05) 1px, transparent 0);
+    background-size:22px 22px;
+    color:var(--ink);
+    font-family:"Nunito",system-ui,sans-serif;
+    font-size:18px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:64px 0 40px;text-align:center}
+  .eyebrow{
+    font-family:"Patrick Hand",cursive;
+    font-size:1.05rem;letter-spacing:.04em;color:var(--ink-soft);
+    transform:rotate(-2deg);display:inline-block;margin-bottom:4px;
+  }
+  .title{
+    font-family:"Caveat",cursive;
+    font-weight:700;
+    font-size:clamp(4rem,16vw,9rem);
+    line-height:.9;
+    margin:0;
+    letter-spacing:-.01em;
+  }
+  .title .a{color:var(--coral)}
+  .title .b{color:var(--ink)}
+  .title .c{color:var(--teal)}
+  .title .wsp{color:var(--Weesperblauw)}
+  .tagline{
+    font-family:"Nunito",sans-serif;font-weight:600;
+    font-size:clamp(1.05rem,2.6vw,1.45rem);
+    color:var(--ink-soft);
+    max-width:30ch;margin:14px auto 0;
+  }
+  .tagline-18{
+    font-family:"Shantell Sans",cursive;
+    font-weight:600;
+    font-variation-settings:"BNCE" 1, "INFM" 1;
+    font-size:clamp(.95rem,2.2vw,1.25rem);
+    color:var(--Weesperblauw);
+    white-space:nowrap;
+  }
+  .scribble-underline{display:block;width:min(620px,88vw);height:18px;margin:6px auto 0}
+
+  .cta-row{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    font-family:"Patrick Hand",cursive;font-size:1.15rem;
+    border:2.5px solid var(--ink);
+    background:var(--paper-sheet);
+    color:var(--ink);
+    padding:11px 22px;border-radius:14px;cursor:pointer;
+    box-shadow:3px 3px 0 var(--ink);
+    transition:transform .12s ease, box-shadow .12s ease;
+    text-decoration:none;display:inline-block;
+  }
+  .btn:hover,.btn:focus-visible{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);outline:none}
+  .btn:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink)}
+  .btn.fill{background:var(--mustard)}
+  .btn.fill-teal{background:var(--teal);color:var(--paper-sheet);border-color:var(--ink)}
+
+  /* floating doodles around hero */
+  .doodle{position:absolute;pointer-events:none;opacity:.92;height:auto;filter:drop-shadow(2px 3px 0 rgba(42,38,34,.10))}
+  .d1{top:38px;left:4%;width:96px;transform:rotate(-8deg)}
+  .d2{top:90px;right:5%;width:104px;transform:rotate(9deg)}
+  .d3{top:240px;left:7%;width:86px;transform:rotate(6deg)}
+  .d4{top:210px;right:8%;width:92px;transform:rotate(-7deg)}
+  .d5{top:420px;left:14%;width:70px;transform:rotate(-14deg)}
+  .d6{top:430px;right:15%;width:78px;transform:rotate(11deg)}
+  @media(max-width:760px){
+    .d3,.d4,.d5,.d6{display:none}
+    .d1{width:64px;top:14px;left:2%}
+    .d2{width:70px;top:30px;right:2%}
+  }
+
+  /* ---------- de avond ---------- */
+  .avond{position:relative;margin:46px 0 10px}
+  .card-note{
+    background:var(--paper-sheet);
+    border:2px solid var(--ink);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:30px clamp(20px,4vw,44px);
+    position:relative;
+  }
+  .card-note::before{
+    content:"";position:absolute;left:50%;top:-15px;transform:translateX(-50%) rotate(-3deg);
+    width:120px;height:30px;background:var(--tape);border:1px dashed var(--tape-edge);border-radius:3px;
+  }
+  /* de oude kaart als achtergrond van "De avond" (lichte sluier = leesbaar) */
+  .avond h2{
+    font-family:"Caveat",cursive;font-weight:700;font-size:clamp(2.4rem,6vw,3.4rem);
+    margin:.1em 0 .1em;text-align:center;
+  }
+  .avond p.lead{text-align:center;max-width:46ch;margin:0 auto 22px;color:var(--ink-soft);font-weight:600}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px;align-items:stretch}
+  .facts.facts-2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:680px){.facts{grid-template-columns:1fr}}
+  .fact{
+    border:2px dashed var(--ink);border-radius:16px;padding:20px 18px 18px;background:var(--paper);
+    transform:rotate(var(--rot,0deg));display:flex;flex-direction:column;
+  }
+  .fact:nth-child(1){--rot:-1deg}
+  .fact:nth-child(2){--rot:.6deg}
+  .fact:nth-child(3){--rot:-.6deg}
+  .fact .ico{font-size:1.8rem;line-height:1}
+  .ico-img{display:block;width:48px;height:48px;object-fit:contain}
+  .fact .note{font-family:"Patrick Hand",cursive;color:var(--ink-soft);font-size:1rem;margin-top:4px}
+  .fact h3{font-family:"Patrick Hand",cursive;font-size:1.45rem;margin:8px 0 4px}
+  .fact .val{font-weight:800;font-size:1.1rem}
+  .fact .next{font-family:"Patrick Hand",cursive;font-size:1rem;color:var(--coral);margin-top:6px}
+  .fact .hint{font-size:.84rem;color:var(--ink-soft);margin-top:auto;padding-top:10px}
+
+  /* foto-vlak in Waar en Meenemen */
+  .fact-foto{display:block;width:100%;height:auto;border-radius:10px;margin:12px 0 4px}
+
+  /* ---------- compacte kalender (past in het vakje) ---------- */
+  .cal{width:100%;margin:12px auto 2px}
+  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+  .cal-title{font-family:"Patrick Hand",cursive;font-size:1rem;text-transform:capitalize}
+  .cal-nav{
+    font-family:"Patrick Hand",cursive;font-size:1rem;line-height:1;
+    width:26px;height:26px;border:2px solid var(--ink);border-radius:8px;background:var(--paper);
+    cursor:pointer;color:var(--ink);padding:0;
+  }
+  .cal-nav:hover,.cal-nav:focus-visible{background:var(--mustard);outline:none}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+  .cal-dow{font-family:"Nunito";font-weight:700;font-size:.6rem;text-transform:uppercase;
+    color:var(--ink-soft);text-align:center;padding-bottom:1px}
+  .cal-cell{
+    aspect-ratio:1/1;display:grid;place-items:center;font-weight:700;font-size:.72rem;
+    border-radius:50%;color:var(--ink);
+  }
+  .cal-cell.blank{visibility:hidden}
+  .cal-cell.club{color:var(--ink);background:url("afbeeldingen/cirkel.svg") center/100% no-repeat, rgba(232,84,62,.18)}
+  .cal-cell.today{background:url("afbeeldingen/krans.svg") center/110% no-repeat;color:var(--ink)}
+  .cal-cell.club.today{background:url("afbeeldingen/krans.svg") center/110% no-repeat, url("afbeeldingen/cirkel.svg") center/100% no-repeat, rgba(232,84,62,.18)}
+  .cal-legend{display:flex;align-items:center;gap:8px;margin-top:12px;
+    font-family:"Patrick Hand",cursive;font-size:1.05rem;color:var(--ink-soft)}
+  .cal-legend .dot-club{width:22px;height:22px;border-radius:50%;background:rgba(232,84,62,.20);border:2.5px solid var(--coral)}
+
+  /* ---------- over Weesp ---------- */
+  .weesp{margin:46px 0 10px}
+  .weesp-card{
+    position:relative;margin:0;border:2px solid var(--ink);border-radius:16px;overflow:hidden;
+    box-shadow:var(--shadow);cursor:zoom-in;
+    /* de hele kaart blijft zichtbaar (contain); lege randen krijgen de papierkleur */
+    background:var(--paper) center/contain no-repeat;
+    background-image:url("afbeeldingen/weesp-atlas-van-loon.jpg");
+    min-height:clamp(420px,52vw,580px);
+    display:flex;align-items:center;justify-content:center;
+    padding:26px 20px 44px;
+    transition:box-shadow .18s ease, transform .18s ease;
+  }
+  .weesp-card::before{
+    content:"";position:absolute;left:50%;top:-13px;transform:translateX(-50%) rotate(-3deg);
+    width:120px;height:26px;background:var(--tape);border:1px dashed var(--tape-edge);border-radius:3px;z-index:2;
+  }
+  .weesp-card:hover,.weesp-card:focus-visible{box-shadow:0 16px 34px rgba(42,38,34,.22);outline:none}
+  .weesp-card:focus-visible{box-shadow:0 0 0 3px var(--coral),var(--shadow)}
+
+  /* doorzichtig vlak achter de tekst, zodat alles leesbaar blijft */
+  .weesp-overlay{
+    position:relative;z-index:1;max-width:42ch;width:100%;
+    background:rgba(251,248,241,.88);
+    border:2px solid var(--ink);border-radius:14px;
+    box-shadow:0 6px 18px rgba(42,38,34,.18);
+    padding:22px 24px 24px;text-align:center;
+  }
+  .weesp-head{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+  .weesp-head h2{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(2.2rem,5.5vw,3.2rem);margin:0}
+  .weesp-head .wp{color:var(--teal)}
+  .b1355{width:150px;height:auto;flex:0 0 auto;margin-top:-4px}
+  .weesp-text{margin:12px 0 0;color:var(--ink);font-weight:600}
+  .weesp-cap{
+    position:absolute;left:0;right:0;bottom:0;z-index:1;
+    background:rgba(42,38,34,.55);color:var(--paper-sheet);
+    font-family:"Patrick Hand",cursive;font-size:.9rem;text-align:center;padding:6px 10px;
+  }
+  @media(max-width:540px){ .b1355{width:120px} .weesp-overlay{padding:18px 16px 20px} }
+
+
+  /* Waar?-sectietitel */
+  .waar-sectie-titel{background:var(--paper);padding:22px 0 4px}
+  .waar-hoofd{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(2.4rem,6vw,3.4rem);
+    text-align:center;margin:0;color:var(--coral)}
+
+  /* ---------- volle-breedte plattegrond van Weesp ---------- */
+  .kaart-vol{margin:0}
+  .plattegrond{position:relative;margin:0;width:100%;line-height:0}
+  .plattegrond img{display:block;width:100%;height:auto}
+  .waar-adres{
+    position:absolute;right:16%;top:42%;transform:translateY(-50%) rotate(-2deg);max-width:30%;
+    background:rgba(251,248,241,.70);border:2px solid var(--ink);border-radius:10px;
+    box-shadow:0 4px 14px rgba(42,38,34,.28);padding:8px 14px;line-height:1.3;
+    font-family:"Patrick Hand",cursive;font-size:clamp(.8rem,1.9vw,1.35rem);color:var(--Weesperblauw);
+  }
+  .weesp-tekst{text-align:center;margin:26px auto 0;max-width:60ch}
+  .weesp-tekst h2{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(2.2rem,6vw,3.2rem);margin:0 0 6px}
+  .weesp-tekst .wp{color:var(--Weesperblauw)}
+  .weesp-tekst p{color:var(--ink-soft);font-weight:600;margin:0}
+  @media(max-width:540px){ .waar-adres{font-size:.78rem;padding:5px 9px;max-width:46%} }
+
+  /* ---------- prikbord ---------- */
+  #prikbord .wrap{max-width:1200px}
+  .board-head{margin:60px 0 6px;text-align:center;position:relative}
+  .board-head h2{
+    font-family:"Caveat",cursive;font-weight:700;font-size:clamp(2.6rem,7vw,4rem);margin:0;color:var(--berry);
+  }
+  .board-head p{margin:.2em auto 0;color:var(--ink-soft);font-weight:600;max-width:48ch}
+
+  .board{
+    position:relative;margin:26px 0 10px;padding:26px 18px 34px;border-radius:20px;
+    background:
+      repeating-linear-gradient(45deg, rgba(42,38,34,.025) 0 14px, transparent 14px 28px),
+      #e7dcc6;
+    border:2px solid #cdb793;
+    box-shadow:inset 0 2px 14px rgba(42,38,34,.12);
+    min-height:160px;
+  }
+  .pins{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:32px 24px;justify-items:center;align-items:start}
+  .pin{
+    width:100%;max-width:200px;background:var(--paper-sheet);border:1px solid rgba(42,38,34,.18);
+    border-radius:6px;padding:10px 10px 8px;box-shadow:var(--shadow);
+    transform:rotate(var(--r,0deg));position:relative;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .pin::before{
+    content:"";position:absolute;left:50%;top:-12px;transform:translateX(-50%) rotate(var(--tr,-4deg));
+    width:64px;height:24px;background:var(--tape);border-radius:2px;
+    box-shadow:0 1px 2px rgba(42,38,34,.18);
+  }
+  .pin:hover,.pin:focus-within{transform:rotate(0deg) translateY(-4px) scale(1.02);box-shadow:0 16px 30px rgba(42,38,34,.2);z-index:3}
+  .pin img,.pin svg{width:100%;height:auto;display:block;border-radius:3px;background:var(--paper-sheet)}
+  .pin .who{font-family:"Patrick Hand",cursive;font-size:1.05rem;text-align:center;margin-top:8px;color:var(--ink)}
+  .pin .who small{display:block;font-family:"Nunito";font-weight:600;font-size:.7rem;color:var(--ink-soft)}
+  .empty{font-family:"Patrick Hand",cursive;color:#6d5f44;font-size:1.25rem;text-align:center;width:100%;padding:24px 10px}
+
+  /* ---------- teken-pad ---------- */
+  .studio{margin:54px 0 30px}
+  .studio h2{
+    font-family:"Caveat",cursive;font-weight:700;font-size:clamp(2.2rem,6vw,3.2rem);
+    text-align:center;margin:0 0 4px;color:var(--blueberry);
+  }
+  .studio .sub{text-align:center;color:var(--ink-soft);font-weight:600;margin:0 auto 22px;max-width:44ch}
+  .pad{
+    background:var(--paper-sheet);border:2px solid var(--ink);border-radius:18px;
+    box-shadow:var(--shadow);padding:18px;max-width:520px;margin:0 auto;
+  }
+  .canvas-frame{
+    border:2px dashed var(--ink);border-radius:12px;overflow:hidden;background:var(--paper-sheet);
+    aspect-ratio:38/28;position:relative;
+  }
+  #pad{width:100%;height:100%;display:block;touch-action:none;cursor:crosshair}
+  .tools{display:flex;flex-direction:column;gap:12px;align-items:center;margin-top:14px}
+  .swatches{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:360px}
+  .tools-rij{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;justify-content:center}
+  .swatch{
+    width:30px;height:30px;border-radius:50%;border:2px solid rgba(42,38,34,.35);cursor:pointer;
+    transition:transform .1s ease;
+  }
+  .swatch[aria-pressed="true"]{border-color:var(--ink);transform:scale(1.15);box-shadow:0 0 0 2px var(--paper-sheet),0 0 0 4px var(--ink)}
+  .sizes{display:flex;gap:8px;align-items:center}
+  .sizebtn{
+    width:34px;height:34px;border-radius:10px;border:2px solid var(--ink);background:var(--paper);
+    display:grid;place-items:center;cursor:pointer;
+  }
+  .sizebtn[aria-pressed="true"]{background:var(--mustard)}
+  .sizebtn .dot{background:var(--ink);border-radius:50%}
+  .toolbtn{
+    font-family:"Patrick Hand",cursive;font-size:1rem;border:2px solid var(--ink);background:var(--paper);
+    border-radius:10px;padding:6px 12px;cursor:pointer;
+  }
+  .toolbtn[aria-pressed="true"]{background:var(--coral);color:var(--paper-sheet)}
+  .name-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+  .name-row input{
+    flex:1;min-width:160px;font-family:"Patrick Hand",cursive;font-size:1.1rem;
+    border:2px solid var(--ink);border-radius:10px;padding:9px 12px;background:var(--paper);color:var(--ink);
+  }
+  .name-row input:focus-visible{outline:3px solid var(--blueberry);outline-offset:1px}
+  .hang{
+    font-family:"Patrick Hand",cursive;font-size:1.15rem;background:var(--teal);color:var(--paper-sheet);
+    border:2.5px solid var(--ink);border-radius:12px;padding:9px 20px;cursor:pointer;box-shadow:3px 3px 0 var(--ink);
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .hang:hover,.hang:focus-visible{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);outline:none}
+  .hang:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink)}
+  .shared-note{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:12px}
+  .toast{
+    position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:var(--paper-sheet);font-family:"Patrick Hand",cursive;font-size:1.1rem;
+    padding:11px 20px;border-radius:12px;box-shadow:var(--shadow);opacity:0;pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;z-index:50;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  footer{text-align:center;padding:30px 0 50px;color:var(--ink-soft);font-family:"Patrick Hand",cursive;font-size:1.05rem}
+  footer .heart{color:var(--coral)}
+
+  /* ---------- vergroot-weergave (lightbox) ---------- */
+  .pin{cursor:zoom-in}
+  .lightbox{
+    position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;
+    padding:24px;background:rgba(42,38,34,.62);backdrop-filter:blur(2px);
+  }
+  .lightbox[hidden]{display:none}
+  .lightbox-card{
+    position:relative;background:var(--paper-sheet);border:2px solid var(--ink);border-radius:14px;
+    box-shadow:0 24px 60px rgba(42,38,34,.45);padding:18px 18px 16px;
+    max-width:min(560px,92vw);width:auto;
+  }
+  .lightbox-art{display:flex;justify-content:center}
+  .lightbox-art img,.lightbox-art svg{
+    display:block;width:100%;height:auto;max-height:70vh;border-radius:6px;background:var(--paper-sheet);
+  }
+  .lightbox-name{font-family:"Patrick Hand",cursive;font-size:1.3rem;text-align:center;margin-top:12px;color:var(--ink)}
+  .lightbox-dl{
+    display:inline-block;margin:10px auto 0;font-family:"Patrick Hand",cursive;font-size:1rem;
+    color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer;
+  }
+  .lightbox-card{display:flex;flex-direction:column;align-items:center}
+  .lightbox-close{
+    position:absolute;top:-14px;right:-14px;width:38px;height:38px;border-radius:50%;
+    border:2px solid var(--ink);background:var(--mustard);color:var(--ink);
+    font-family:"Patrick Hand",cursive;font-size:1.1rem;cursor:pointer;box-shadow:2px 2px 0 var(--ink);
+  }
+  .lightbox-close:hover,.lightbox-close:focus-visible{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--ink);outline:none}
+
+  /* entrance animation */
+  @keyframes settle{from{opacity:0;transform:translateY(10px) rotate(var(--rot-from,-6deg)) scale(.96)}}
+  .doodle, .title, .tagline, .cta-row{animation:settle .6s cubic-bezier(.2,.8,.2,1) both}
+  .title{animation-delay:.05s}
+  .tagline{animation-delay:.18s}
+  .cta-row{animation-delay:.28s}
+  .d1{animation-delay:.34s;--rot-from:-8deg}
+  .d2{animation-delay:.40s;--rot-from:9deg}
+  .d3{animation-delay:.46s;--rot-from:6deg}
+  .d4{animation-delay:.52s;--rot-from:-7deg}
+  .d5{animation-delay:.58s;--rot-from:-14deg}
+  .d6{animation-delay:.62s;--rot-from:11deg}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;scroll-behavior:auto}
+    .pin{transition:none}
+  }

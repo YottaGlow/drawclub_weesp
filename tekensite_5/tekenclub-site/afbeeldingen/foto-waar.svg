@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220">
+  <rect x="3" y="3" width="314" height="214" rx="12" fill="#FBF8F1" stroke="#2A2622" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <g fill="none" stroke="#2FA39A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 118 v-22 q0 -10 10 -10 h60 q10 0 10 10 v22"/>
+    <path d="M112 100 l48 -34 48 34"/>
+    <rect x="120" y="108" width="80" height="44" rx="3"/>
+    <path d="M150 152 v-26 h20 v26"/>
+  </g>
+  <text x="160" y="186" text-anchor="middle" font-family="'Patrick Hand',cursive" font-size="20" fill="#5b534b">zet hier een foto van de plek</text>
+</svg>

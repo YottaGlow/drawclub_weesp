@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tekenclub — samen tekenen aan één grote tafel</title>
+
+  <!-- lettertypes van Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&family=Nunito:wght@400;600;700;800&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- onze eigen opmaak -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">welkom bij de</span>
+      <h1 class="title"><span class="a">Draw</span><span class="b">Club</span> <span class="wsp">Weesp</span></h1>
+      <svg class="scribble-underline" viewBox="0 0 620 18" fill="none" aria-hidden="true">
+        <path d="M4 12 C 130 4, 240 16, 340 9 S 520 4, 616 11" stroke="#F2B33D" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <p class="tagline">Eén grote tafel, een berg potloden, en iedereen die zin heeft om te tekenen. <!--- <span class="tagline-18">(18+)</span></p>
+      <div class="cta-row">--->
+        <a class="btn fill-teal" href="#studio">Teken zelf iets ✏️</a>
+        <a class="btn" href="#prikbord">Bekijk het prikbord</a>
+      </div>
+    </div>
+
+    <!-- losse doodles -->
+    <img class="doodle d1" src="afbeeldingen/doodle-1.svg" alt="" aria-hidden="true">
+
+    <img class="doodle d2" src="afbeeldingen/doodle-2.svg" alt="" aria-hidden="true">
+
+    <img class="doodle d3" src="afbeeldingen/doodle-3.svg" alt="" aria-hidden="true">
+
+    <img class="doodle d4" src="afbeeldingen/doodle-4.svg" alt="" aria-hidden="true">
+
+    <img class="doodle d5" src="afbeeldingen/doodle-5.svg" alt="" aria-hidden="true">
+
+    <img class="doodle d6" src="afbeeldingen/doodle-6.svg" alt="" aria-hidden="true">
+  </header>
+
+  <!-- ============ DE AVOND ============ -->
+  <section class="avond">
+    <div class="wrap">
+      <div class="card-note">
+        <h2>De avond</h2>
+        <p class="lead">We schuiven aan één grote tafel en gaan los: tekenen, schetsen, schilderen of gewoon wat krabbelen. Geen niveau nodig, wel zin om iets te maken.</p>
+        <div class="facts facts-2">
+          <div class="fact">
+            <img class="ico-img" src="afbeeldingen/icoon-wanneer.svg" alt="" aria-hidden="true">
+            <h3>Wanneer</h3>
+            <div class="val">Woensdag 19 augustus.<br>Van 19:30 tot 22:00.</div>
+            <div class="cal" id="cal" aria-label="Kalender met de tekenavonden">
+              <div class="cal-head">
+                <button class="cal-nav" id="cal-prev" type="button" aria-label="Vorige maand">‹</button>
+                <div class="cal-title" id="cal-title">—</div>
+                <button class="cal-nav" id="cal-next" type="button" aria-label="Volgende maand">›</button>
+              </div>
+              <div class="cal-grid" id="cal-grid"></div>
+              <div class="cal-legend"><span class="dot-club"></span> tekenavond</div>
+            </div>
+          </div>
+          <div class="fact">
+            <img class="ico-img" src="afbeeldingen/icoon-meenemen.svg" alt="" aria-hidden="true">
+            <h3>Meenemen</h3>
+            <div class="val">je eigen tekengerei. Potlood lenen kan altijd.</div>
+            <div class="note">Ideeën om te tekenen zijn er genoeg.</div>
+            <img class="fact-foto" src="afbeeldingen/foto-meenemen.svg" alt="Foto van wat je meeneemt" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WAAR? TITEL + PLATTEGROND VAN WEESP (volle breedte) ============ -->
+  <div class="waar-sectie-titel"><div class="wrap"><h2 class="waar-hoofd">Waar?</h2></div></div>
+  <section class="kaart-vol">
+    <figure class="plattegrond">
+      <img src="afbeeldingen/weesp-atlas-van-loon.jpg" alt="Oude kaart van Weesp met de locatie van de tekenclub" loading="lazy">
+      <figcaption class="waar-adres">café 't Weesperplein<br>Slijkstraat 24</figcaption>
+    </figure>
+    <div class="wrap">
+      <div class="weesp-tekst">
+        <h2>Tekenen in <span class="wp">Weesp</span></h2>
+        <p>Onze tekenclub zit in Weesp, dat al sinds 20 mei 1355 stadsrechten heeft — verleend door graaf Willem V van Holland. Het stadje ligt in een scherpe bocht van de Vecht (de rivier die je onderaan de oude kaart ziet) en stond vroeger bekend om zijn jenever en later om de chocolade van Van Houten. Sinds 2022 hoort Weesp bij de gemeente Amsterdam, maar het heeft z'n eigen gezicht helemaal behouden.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRIKBORD ============ -->
+  <section id="prikbord">
+    <div class="wrap">
+      <div class="board-head">
+        <h2>Het prikbord</h2>
+        <p>Alles wat hier hangt is door bezoekers getekend. Teken hieronder zelf iets en hang het erbij!</p>
+      </div>
+      <div class="board">
+        <div class="pins" id="pins"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEKEN-PAD ============ -->
+  <section class="studio" id="studio">
+    <div class="wrap">
+      <h2>Teken zelf iets</h2>
+      <p class="sub">Krabbel iets op het vel, zet je naam erbij en hang het meteen op het prikbord.</p>
+      <div class="pad">
+        <div class="canvas-frame">
+          <canvas id="pad" width="608" height="448" aria-label="Tekenvel"></canvas>
+        </div>
+        <div class="tools">
+          <div class="swatches" id="swatches" role="group" aria-label="Kleur kiezen"></div>
+          <div class="tools-rij">
+            <div class="sizes" id="sizes" role="group" aria-label="Penseelgrootte">
+              <button class="sizebtn" data-size="3" aria-pressed="false" aria-label="Dun"><span class="dot" style="width:6px;height:6px"></span></button>
+              <button class="sizebtn" data-size="7" aria-pressed="true" aria-label="Gemiddeld"><span class="dot" style="width:11px;height:11px"></span></button>
+              <button class="sizebtn" data-size="14" aria-pressed="false" aria-label="Dik"><span class="dot" style="width:18px;height:18px"></span></button>
+            </div>
+            <button class="toolbtn" id="eraser" aria-pressed="false">gum</button>
+            <button class="toolbtn" id="clear">leeg</button>
+          </div>
+        </div>
+        <div class="name-row">
+          <input id="artist" type="text" maxlength="40" placeholder="je naam (mag ook leeg)">
+          <button class="hang" id="hang">Zet op het prikbord</button>
+        </div>
+        <p class="shared-note">Je tekening komt meteen op het openbare prikbord — iedereen kan 'm zien. Om spam te voorkomen kun je eens per paar minuten iets insturen.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Gemaakt voor de tafel, de thee en de tekeningen <span class="heart">♥</span>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- vergroot-weergave: opent als je op een tekening klikt -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Tekening groot" hidden>
+    <div class="lightbox-card">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Sluiten">✕</button>
+      <div class="lightbox-art" id="lightbox-art"></div>
+      <div class="lightbox-name" id="lightbox-name"></div>
+      <a class="lightbox-dl" id="lightbox-dl" download>download deze tekening</a>
+    </div>
+  </div>
+
+  <!-- ons eigen script: laadt het prikbord en regelt het tekenvel -->
+  <!-- Supabase-bibliotheek (praat met je database) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220">
+  <rect x="3" y="3" width="314" height="214" rx="12" fill="#FBF8F1" stroke="#2A2622" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <g stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="rotate(-22 160 105)">
+      <path d="M132 70 h20 v52 l-10 16 -10 -16 Z" fill="#F2B33D" stroke="#2A2622"/>
+      <path d="M132 122 h20" fill="none" stroke="#2A2622"/>
+    </g>
+    <g transform="rotate(20 168 108)">
+      <path d="M172 74 h20 v52 l-10 16 -10 -16 Z" fill="#E8543E" stroke="#2A2622"/>
+      <path d="M172 126 h20" fill="none" stroke="#2A2622"/>
+    </g>
+  </g>
+  <text x="160" y="190" text-anchor="middle" font-family="'Patrick Hand',cursive" font-size="20" fill="#5b534b">zet hier een foto</text>
+</svg>
