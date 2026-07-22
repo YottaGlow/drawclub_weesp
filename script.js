@@ -13,7 +13,7 @@
   // ====== JOUW SUPABASE-GEGEVENS — hier invullen ======
   var SUPABASE_URL    = "https://dihfvhexqsyjmrzmmzfl.supabase.co";   // je Project URL
   var SUPABASE_KEY    = "sb_publishable_ZI7Bo3-TsgmZXJLchjeqWA_ub6z3u2t";        // je Publishable key
-  var SUPABASE_BUCKET = "Tekeningen";                     // exacte bucketnaam (let op hoofdletter!)
+  var SUPABASE_BUCKET = "tekeningen";                     // exacte bucketnaam (let op hoofdletter!)
   var WACHTTIJD_MIN   = 3;   // minuten tussen twee inzendingen per apparaat
   // ====================================================
 
