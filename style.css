@@ -55,7 +55,7 @@
     font-family:"Nunito",sans-serif;font-weight:600;
     font-size:clamp(1.05rem,2.6vw,1.45rem);
     color:var(--ink-soft);
-    max-width:60ch;margin:14px auto 0;
+    max-width:60ch;margin:14px auto 20px;
   }
   .tagline-18{
     font-family:"Shantell Sans",cursive;
