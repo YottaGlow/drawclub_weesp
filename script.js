@@ -23,7 +23,7 @@
                  typeof window.supabase !== "undefined";
   var sb = SB_KLAAR ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
 
-  var COLORS = ["#2A2622","#E8543E","#F2B33D","#4CAF50","#2FA39A","#4E63C8",
+  var COLORS = ["#000000","#E8543E","#F2B33D","#4CAF50","#2FA39A","#4E63C8",
                 "#7E57C2","#D8568C","#8D5524","#F28C28","#0036A7","#FFFFFF"];
   var PAPER  = "#FBF8F1";
 
