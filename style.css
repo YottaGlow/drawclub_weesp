@@ -263,7 +263,7 @@
   /* ---------- teken-pad ---------- */
   .studio{margin:54px 0 30px}
   .studio h2{
-    font-family:"Caveat",cursive;font-weight:700;font-size:clamp(2.2rem,6vw,3.2rem);
+    font-family:"Caveat",cursive;font-weight:500;font-size:clamp(2.2rem,6vw,3.2rem);
     text-align:center;margin:0 0 4px;color:var(--blueberry);
   }
   .studio .sub{text-align:center;color:var(--ink-soft);font-weight:600;margin:0 auto 22px;max-width:44ch}
