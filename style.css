@@ -55,7 +55,7 @@
     font-family:"Nunito",sans-serif;font-weight:600;
     font-size:clamp(1.05rem,2.6vw,1.45rem);
     color:var(--ink-soft);
-    max-width:30ch;margin:14px auto 0;
+    max-width:44ch;margin:14px auto 0;
   }
   .tagline-18{
     font-family:"Shantell Sans",cursive;
@@ -67,7 +67,7 @@
   }
   .scribble-underline{display:block;width:min(620px,88vw);height:18px;margin:6px auto 0}
 
-  .cta-row{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:nowrap}
+  .cta-row{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:nowrap}
   .btn{
     font-family:"Shantell Sans",cursive;font-size:1.15rem;font-variation-settings:"BNCE" 0,"INFM" 1;font-weight:300;
     border:2.5px solid var(--ink);
