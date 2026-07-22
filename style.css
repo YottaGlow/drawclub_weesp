@@ -69,11 +69,11 @@
 
   .cta-row{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:nowrap}
   .btn{
-    font-family:"Shantell Sans",cursive;font-size:1.15rem;font-variation-settings:"BNCE" 0,"INFM" 1;font-weight:300;
+    font-family:"Shantell Sans",cursive;font-size:1rem;font-variation-settings:"BNCE" 0,"INFM" 1;font-weight:300;
     border:2.5px solid var(--ink);
     background:var(--paper-sheet);
     color:var(--ink);
-    padding:11px 22px;border-radius:14px;cursor:pointer;
+    padding:9px 16px;border-radius:14px;cursor:pointer;
     box-shadow:3px 3px 0 var(--ink);
     transition:transform .12s ease, box-shadow .12s ease;
     text-decoration:none;display:inline-block;
