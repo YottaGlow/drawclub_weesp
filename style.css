@@ -67,7 +67,7 @@
   }
   .scribble-underline{display:block;width:min(620px,88vw);height:18px;margin:6px auto 0}
 
-  .cta-row{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta-row{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:nowrap}
   .btn{
     font-family:"Shantell Sans",cursive;font-size:1.15rem;font-variation-settings:"BNCE" 0,"INFM" 1;font-weight:300;
     border:2.5px solid var(--ink);
