@@ -69,7 +69,7 @@
 
   .cta-row{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .btn{
-    font-family:"Patrick Hand",cursive;font-size:1.15rem;font-weight:400;
+    font-family:"Shantell Sans",cursive;font-variation-settings:"BNCE" 0,"INFM" 1;
     border:2.5px solid var(--ink);
     background:var(--paper-sheet);
     color:var(--ink);
