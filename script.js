@@ -7,7 +7,7 @@
   var CLUB_WEEKDAY = null; // geen vaste wekelijkse dag
   // Extra losse data die ook op de kalender oplichten (bijv. een speciale avond):
   // "JJJJ-MM-DD", bijvoorbeeld "2026-07-18". Laat leeg als je die niet gebruikt.
-  var CLUB_DATES = ["2026-08-19"];
+  var CLUB_DATES = ["2026-08-19","2026-09-23"];
   // ============================================
 
   // ====== JOUW SUPABASE-GEGEVENS — hier invullen ======
