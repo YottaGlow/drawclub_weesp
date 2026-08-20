@@ -225,6 +225,18 @@
   .weesp-tekst p{color:var(--ink-soft);font-weight:600;margin:0;max-width:80ch}
   @media(max-width:540px){ .waar-adres{font-size:.78rem;padding:5px 9px;max-width:46%} }
 
+/* ---------- eerste avond ---------- */
+.eerste-avond{margin:46px 0 10px;text-align:center}
+.eerste-avond-titel{
+  font-family:"Caveat",cursive;font-weight:700;
+  font-size:clamp(2rem,5vw,3rem);
+  margin:0 0 24px;
+}
+.datum-groen{color:#2D6A4F}
+.eerste-avond-foto{max-width:480px;margin:0 auto}
+.eerste-avond-foto img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:var(--shadow)}
+
+
   /* ---------- prikbord ---------- */
   #prikbord .wrap{max-width:1200px}
   .board-head{margin:60px 0 6px;text-align:center;position:relative}
