@@ -67,7 +67,7 @@
   }
   .scribble-underline{display:block;width:min(620px,88vw);height:18px;margin:6px auto 0}
 
-  .cta-row{margin-top:0;display:flex;gap:14px;justify-content:center;flex-wrap:nowrap}
+  .cta-row{margin-top:0;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .btn{
     font-family:"Shantell Sans",cursive;font-size:1rem;font-variation-settings:"BNCE" 0,"INFM" 1;font-weight:300;
     border:2.5px solid var(--ink);
@@ -81,6 +81,7 @@
   .btn:hover,.btn:focus-visible{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);outline:none}
   .btn:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink)}
   .btn.fill{background:var(--mustard)}
+  .btn.fill-mustard{background:var(--mustard);color:var(--ink)}
   .btn.fill-teal{background:var(--teal);color:var(--paper-sheet);border-color:var(--ink)}
 
   /* floating doodles around hero */
@@ -120,6 +121,7 @@
   .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px;align-items:stretch}
   .facts.facts-2{grid-template-columns:repeat(2,1fr)}
   @media(max-width:768px){.facts.facts-2{grid-template-columns:1fr}}
+  .cta-row .btn:last-child{flex-basis:100%;text-align:center}
   .fact{
     border:2px dashed var(--ink);border-radius:16px;padding:20px 18px 18px;background:var(--paper);
     transform:rotate(var(--rot,0deg));display:flex;flex-direction:column;

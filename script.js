@@ -392,5 +392,13 @@
     showNextSession();
   })();
 
+  // e-mailadres beschermd tegen bots
+  (function(){
+    var a = "drawclubweesp";
+    var b = "gmail.com";
+    var btn = document.getElementById("mailto-btn");
+    if(btn) btn.href = "mailto:" + a + "@" + b;
+  })();
+  
   loadBoard();
 })();
