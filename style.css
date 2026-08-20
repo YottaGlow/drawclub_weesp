@@ -233,7 +233,8 @@
   margin:0 0 24px;
 }
 .datum-groen{color:#2D6A4F}
-.eerste-avond-foto{max-width:480px;margin:0 auto}
+.eerste-avond-tekst{max-width:80ch;margin:0 auto 24px;color:var(--ink-soft);font-weight:600;text-align:center}
+.eerste-avond-foto{max-width:800px;margin:0 auto}
 .eerste-avond-foto img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:var(--shadow)}
 
 
