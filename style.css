@@ -418,6 +418,13 @@ body.avonden-pagina::before{
 
 body.avonden-pagina .wrap{max-width:1400px}
 
+/* ----- alinea kop ----- */
+.alinea-kop{
+  font-weight:700;
+  font-size:1.15rem;
+  margin-bottom:.3em;
+}  
+
 /* ---- terugknop: uiterste linkerbovenhoek, transparant ---- */
 .terug-btn{
   position:fixed;
