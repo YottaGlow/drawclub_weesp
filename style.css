@@ -9,6 +9,7 @@
     --mustard:#F2B33D;
     --teal:#2FA39A;
     --blueberry:#4E63C8;
+    --tafel:#7A4B21;
     --berry:#D8568C;
     --Weesperblauw:#0036A7;
     --shadow:0 10px 24px rgba(42,38,34,.14), 0 2px 6px rgba(42,38,34,.10);
@@ -83,7 +84,7 @@
   .btn.fill{background:var(--mustard)}
   .btn.fill-mustard{background:var(--mustard);color:var(--ink)}
   .btn.fill-teal{background:var(--teal);color:var(--paper-sheet);border-color:var(--ink)}
-  .btn.fill-blueberry{background:var(--blueberry);color:var(--paper-sheet);border-color:var(--ink)}
+  .btn.fill-tafel{background:var(--tafel);color:#FBF8F1;border-color:#3D2208;box-shadow:3px 3px 0 #3D2208}
 
   /* floating doodles around hero */
   .doodle{position:absolute;pointer-events:none;opacity:.92;height:auto;filter:drop-shadow(2px 3px 0 rgba(42,38,34,.10))}
