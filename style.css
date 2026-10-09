@@ -396,7 +396,7 @@
   --cafe-warm:#6B3A1F;
   --lamp:#F5C842;
   --lamp-dim:rgba(245,200,66,.55);
-  --kaart-bg:#2A1608;
+  --kaart-bg:#6A3F24;
   --kaart-rand:rgba(200,140,50,.22);
   --tekst-warm:#E8DCC8;
   --tekst-zacht:rgba(232,220,200,.6);
@@ -416,7 +416,7 @@ body.avonden-pagina::before{
     repeating-linear-gradient(92deg, transparent 0 80px, rgba(255,255,255,.005) 80px 81px);
 }
 
-body.avonden-pagina .wrap{max-width:1000px}
+body.avonden-pagina .wrap{max-width:1200px}
 
 /* ---- terugknop: uiterste linkerbovenhoek, transparant ---- */
 .terug-btn{
@@ -522,7 +522,7 @@ body.avonden-pagina .wrap{max-width:1000px}
   padding:clamp(28px,5vw,52px);
   margin-bottom:64px;
   position:relative;z-index:1;
-  color:var(--tekst-warm);
+  color:#170A04;
 }
 
 /* zijlamp naast de kaart (buiten het vlak) */
@@ -572,14 +572,14 @@ body.avonden-pagina .wrap{max-width:1000px}
 .avond-tekst{
   font-size:1.05rem;
   line-height:1.82;
-  color:var(--tekst-warm);
+  color:#170A04;
 }
 .avond-tekst p{margin:0 0 1.1em}
 .avond-tekst p:last-child{margin-bottom:0}
 
 /* ---- passepartout foto ---- */
 .avond-foto-wrap{
-  background:#EDE8D8;           /* crème passepartout */
+  background:linear-gradient(145deg, #3A2510 0%, #2A1A0A 40%, #1E1208 70%, #2E1A0C 100%);         /* crème passepartout */
   padding:14px 14px 36px 14px;  /* breed onderaan voor onderschrift-ruimte */
   border-radius:3px;
   box-shadow:
@@ -634,7 +634,7 @@ body.avonden-pagina .wrap{max-width:1000px}
 }
 /* kleine foto's in de grid ook passepartout */
 .foto-wrap{
-  background:#EDE8D8;
+  background:linear-gradient(145deg, #3A2510 0%, #2A1A0A 40%, #1E1208 70%, #2E1A0C 100%);
   padding:8px 8px 24px 8px;
   border-radius:3px;
   box-shadow:0 3px 10px rgba(0,0,0,.5), 0 1px 3px rgba(0,0,0,.35);
