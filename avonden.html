@@ -4,16 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>De avonden — DrawClub Weesp</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&family=Nunito:wght@400;600;700;800&family=Shantell+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="avonden-pagina">
 
-  <!-- terugknop — uiterste linkerbovenhoek -->
+  <!-- terugknop uiterste linkerbovenhoek -->
   <a class="terug-btn" href="index.html">← terug</a>
 
   <!-- datum-navigatie rechtsboven -->
@@ -26,76 +24,75 @@
     <a class="datum-chip toekomst" href="#">16 dec</a>
   </nav>
 
-  <!-- muurlamp decoratie bovenaan -->
-  <div class="muurlamp-wrap">
-    <svg width="160" height="220" viewBox="0 0 160 220" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="gloed" cx="50%" cy="45%" r="55%">
-          <stop offset="0%"  stop-color="#FFD580" stop-opacity=".55"/>
-          <stop offset="50%" stop-color="#C8640A" stop-opacity=".18"/>
-          <stop offset="100%" stop-color="#6B2800" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="ambertop" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%"  stop-color="#FFF4CC" stop-opacity=".92"/>
-          <stop offset="60%" stop-color="#F5A623" stop-opacity=".85"/>
-          <stop offset="100%" stop-color="#C8640A" stop-opacity=".95"/>
-        </linearGradient>
-        <linearGradient id="messing" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%"  stop-color="#8B6914"/>
-          <stop offset="40%" stop-color="#D4A82A"/>
-          <stop offset="70%" stop-color="#A07820"/>
-          <stop offset="100%" stop-color="#6B4F10"/>
-        </linearGradient>
-        <linearGradient id="messingV" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%"  stop-color="#C49A20"/>
-          <stop offset="50%" stop-color="#8B6914"/>
-          <stop offset="100%" stop-color="#5A4010"/>
-        </linearGradient>
-        <linearGradient id="bundel" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%"  stop-color="#FFD580" stop-opacity=".22"/>
-          <stop offset="100%" stop-color="#FFD580" stop-opacity="0"/>
-        </linearGradient>
-        <filter id="glinstering" x="-10%" y="-10%" width="120%" height="120%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.9 0.4" numOctaves="3" result="noise"/>
-          <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
-        </filter>
-      </defs>
-      <ellipse cx="80" cy="90" rx="72" ry="58" fill="url(#gloed)" opacity=".9"/>
-      <path d="M52 118 L20 210 L140 210 L108 118 Z" fill="url(#bundel)"/>
-      <ellipse cx="28" cy="80" rx="13" ry="38" fill="url(#messingV)" stroke="#5A3E0A" stroke-width="1.2"/>
-      <ellipse cx="28" cy="80" rx="9" ry="28" fill="none" stroke="#C49A20" stroke-width=".8" opacity=".6"/>
-      <circle cx="28" cy="46" r="5" fill="url(#messing)" stroke="#5A3E0A" stroke-width="1"/>
-      <circle cx="28" cy="46" r="2.5" fill="#FFD580" opacity=".7"/>
-      <circle cx="28" cy="114" r="4" fill="url(#messing)" stroke="#5A3E0A" stroke-width="1"/>
-      <rect x="28" y="77" width="22" height="7" rx="3.5" fill="url(#messing)" stroke="#5A3E0A" stroke-width=".8"/>
-      <path d="M50 80 C62 80, 70 88, 70 100 C70 112, 62 118, 55 118" stroke="url(#messing)" stroke-width="8" stroke-linecap="round" fill="none"/>
-      <path d="M50 80 C62 80, 70 88, 70 100 C70 112, 62 118, 55 118" stroke="#C49A20" stroke-width="3" stroke-linecap="round" fill="none" opacity=".5"/>
-      <path d="M55 118 C50 118, 46 122, 48 126 C50 130, 56 128, 55 124" stroke="url(#messing)" stroke-width="5" stroke-linecap="round" fill="none"/>
-      <rect x="48" y="115" width="24" height="14" rx="4" fill="url(#messingV)" stroke="#5A3E0A" stroke-width="1.2"/>
-      <rect x="52" y="118" width="6" height="8" rx="1.5" fill="#A07820" opacity=".7"/>
-      <rect x="62" y="118" width="6" height="8" rx="1.5" fill="#A07820" opacity=".7"/>
-      <path d="M44 118 Q60 122 76 118 L78 126 Q60 132 42 126 Z" fill="#C8640A" stroke="#8B3E00" stroke-width=".8"/>
-      <path d="M42 126 Q38 108, 40 94 Q45 78, 60 74 Q75 78, 80 94 Q82 108, 78 126 Z" fill="url(#ambertop)" stroke="#C8640A" stroke-width="1.2"/>
-      <path d="M42 126 Q38 108, 40 94 Q45 78, 60 74 Q75 78, 80 94 Q82 108, 78 126 Z" fill="none" stroke="rgba(255,255,255,.25)" stroke-width=".6" filter="url(#glinstering)"/>
-      <line x1="50" y1="76" x2="46" y2="124" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
-      <line x1="56" y1="74" x2="54" y2="126" stroke="rgba(255,255,255,.22)" stroke-width="1.2"/>
-      <line x1="62" y1="74" x2="62" y2="126" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
-      <line x1="68" y1="75" x2="70" y2="125" stroke="rgba(255,255,255,.15)" stroke-width="1.2"/>
-      <line x1="74" y1="78" x2="76" y2="122" stroke="rgba(255,255,255,.12)" stroke-width="1.2"/>
-      <path d="M43 105 Q44 95 46 88" stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-linecap="round"/>
-      <ellipse cx="60" cy="105" rx="7" ry="9" fill="#FFF0A0" opacity=".75"/>
-      <ellipse cx="60" cy="105" rx="3.5" ry="4.5" fill="#FFFFFF" opacity=".6"/>
-      <ellipse cx="60" cy="74" rx="20" ry="5" fill="#3A1800" stroke="#C8640A" stroke-width="1"/>
-      <ellipse cx="60" cy="74" rx="16" ry="3.5" fill="#FFE080" opacity=".4"/>
-      <ellipse cx="60" cy="60" rx="30" ry="18" fill="#FFD580" opacity=".12"/>
-    </svg>
-  </div>
-
-  <!-- paginatitel -->
+  <!-- paginakop: titel links, lamp rechts -->
   <div class="wrap">
-    <div class="pagina-titel">
-      <h1>De avonden</h1>
-      <p class="sub">Verslagen, foto's en wat er zoal in me omgaat</p>
+    <div class="pagina-kop">
+      <div class="pagina-titel">
+        <h1>De avonden</h1>
+      </div>
+      <div class="muurlamp-wrap">
+        <svg width="160" height="220" viewBox="0 0 160 220" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="gloed" cx="50%" cy="45%" r="55%">
+              <stop offset="0%"  stop-color="#FFD580" stop-opacity=".55"/>
+              <stop offset="50%" stop-color="#C8640A" stop-opacity=".18"/>
+              <stop offset="100%" stop-color="#6B2800" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="ambertop" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"  stop-color="#FFF4CC" stop-opacity=".92"/>
+              <stop offset="60%" stop-color="#F5A623" stop-opacity=".85"/>
+              <stop offset="100%" stop-color="#C8640A" stop-opacity=".95"/>
+            </linearGradient>
+            <linearGradient id="messing" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%"  stop-color="#8B6914"/>
+              <stop offset="40%" stop-color="#D4A82A"/>
+              <stop offset="70%" stop-color="#A07820"/>
+              <stop offset="100%" stop-color="#6B4F10"/>
+            </linearGradient>
+            <linearGradient id="messingV" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"  stop-color="#C49A20"/>
+              <stop offset="50%" stop-color="#8B6914"/>
+              <stop offset="100%" stop-color="#5A4010"/>
+            </linearGradient>
+            <linearGradient id="bundel" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"  stop-color="#FFD580" stop-opacity=".22"/>
+              <stop offset="100%" stop-color="#FFD580" stop-opacity="0"/>
+            </linearGradient>
+            <filter id="glinstering" x="-10%" y="-10%" width="120%" height="120%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.9 0.4" numOctaves="3" result="noise"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+          </defs>
+          <ellipse cx="80" cy="90" rx="72" ry="58" fill="url(#gloed)" opacity=".9"/>
+          <path d="M52 118 L20 210 L140 210 L108 118 Z" fill="url(#bundel)"/>
+          <ellipse cx="28" cy="80" rx="13" ry="38" fill="url(#messingV)" stroke="#5A3E0A" stroke-width="1.2"/>
+          <ellipse cx="28" cy="80" rx="9" ry="28" fill="none" stroke="#C49A20" stroke-width=".8" opacity=".6"/>
+          <circle cx="28" cy="46" r="5" fill="url(#messing)" stroke="#5A3E0A" stroke-width="1"/>
+          <circle cx="28" cy="46" r="2.5" fill="#FFD580" opacity=".7"/>
+          <circle cx="28" cy="114" r="4" fill="url(#messing)" stroke="#5A3E0A" stroke-width="1"/>
+          <rect x="28" y="77" width="22" height="7" rx="3.5" fill="url(#messing)" stroke="#5A3E0A" stroke-width=".8"/>
+          <path d="M50 80 C62 80, 70 88, 70 100 C70 112, 62 118, 55 118" stroke="url(#messing)" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <path d="M50 80 C62 80, 70 88, 70 100 C70 112, 62 118, 55 118" stroke="#C49A20" stroke-width="3" stroke-linecap="round" fill="none" opacity=".5"/>
+          <path d="M55 118 C50 118, 46 122, 48 126 C50 130, 56 128, 55 124" stroke="url(#messing)" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <rect x="48" y="115" width="24" height="14" rx="4" fill="url(#messingV)" stroke="#5A3E0A" stroke-width="1.2"/>
+          <rect x="52" y="118" width="6" height="8" rx="1.5" fill="#A07820" opacity=".7"/>
+          <rect x="62" y="118" width="6" height="8" rx="1.5" fill="#A07820" opacity=".7"/>
+          <path d="M44 118 Q60 122 76 118 L78 126 Q60 132 42 126 Z" fill="#C8640A" stroke="#8B3E00" stroke-width=".8"/>
+          <path d="M42 126 Q38 108, 40 94 Q45 78, 60 74 Q75 78, 80 94 Q82 108, 78 126 Z" fill="url(#ambertop)" stroke="#C8640A" stroke-width="1.2"/>
+          <path d="M42 126 Q38 108, 40 94 Q45 78, 60 74 Q75 78, 80 94 Q82 108, 78 126 Z" fill="none" stroke="rgba(255,255,255,.25)" stroke-width=".6" filter="url(#glinstering)"/>
+          <line x1="50" y1="76" x2="46" y2="124" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+          <line x1="56" y1="74" x2="54" y2="126" stroke="rgba(255,255,255,.22)" stroke-width="1.2"/>
+          <line x1="62" y1="74" x2="62" y2="126" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+          <line x1="68" y1="75" x2="70" y2="125" stroke="rgba(255,255,255,.15)" stroke-width="1.2"/>
+          <line x1="74" y1="78" x2="76" y2="122" stroke="rgba(255,255,255,.12)" stroke-width="1.2"/>
+          <path d="M43 105 Q44 95 46 88" stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-linecap="round"/>
+          <ellipse cx="60" cy="105" rx="7" ry="9" fill="#FFF0A0" opacity=".75"/>
+          <ellipse cx="60" cy="105" rx="3.5" ry="4.5" fill="#FFFFFF" opacity=".6"/>
+          <ellipse cx="60" cy="74" rx="20" ry="5" fill="#3A1800" stroke="#C8640A" stroke-width="1"/>
+          <ellipse cx="60" cy="74" rx="16" ry="3.5" fill="#FFE080" opacity=".4"/>
+          <ellipse cx="60" cy="60" rx="30" ry="18" fill="#FFD580" opacity=".12"/>
+        </svg>
+      </div>
     </div>
   </div>
   <span class="divider"></span>
@@ -106,62 +103,121 @@
     <!-- ---- Avond 2: 23 september 2026 ---- -->
     <article class="avond-kaart" id="avond-sep23">
 
-      <header class="avond-header">
-        <div class="avond-header-tekst">
-          <h2 class="avond-datum">Woensdag 23 september</h2>
-          <p class="avond-subtitel">De tweede tekenavond — 2026</p>
-          <div class="avond-badges">
-            <span class="badge b-coral">13 tekenaars</span>
-            <span class="badge b-teal">café 't Weesperplein</span>
-          </div>
-        </div>
-        <div class="avond-header-foto">
-          <div class="foto-wrap" style="--r:-1.5deg">
-            <div class="foto-slot foto-slot-breed">
-              <!-- <img src="afbeeldingen/sep23-foto-1.jpg" alt="23 september — hoofd­foto"> -->
-              <span class="ph-icon">📷</span>
-              <span class="ph-label">sep23-foto-1.jpg</span>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div class="avond-tekst">
-        <p>De tweede tekenavond was weer gezellig! Dit keer kwamen er 13 tekenaars opdagen — iets meer dan de eerste keer, en dat voelde goed. Er hing meteen die vertrouwde rust van potlood op papier, het zachte gekrabbel, iemand die z'n gum zoekt.</p>
-        <p>Wat me opvalt is dat iedereen z'n eigen wereld mee naar de tafel brengt. De één tekent architectuur, de ander dieren, weer iemand anders pakt een gezicht aan. Niemand vraagt wat het moet voorstellen — dat is precies de vrijheid die ik voor ogen had toen ik dit begon.</p>
-        <p>De avond vloog voorbij. Om 22:00 zaten we er nog steeds, niemand stond op. Dat is voor mij het teken dat het klopt.</p>
+      <!-- zijlamp naast de kaart (buiten het vlak, alleen breed scherm) -->
+      <div class="zijlamp">
+        <svg width="120" height="165" viewBox="0 0 160 220" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="gloed2" cx="50%" cy="45%" r="55%">
+              <stop offset="0%"  stop-color="#FFD580" stop-opacity=".5"/>
+              <stop offset="50%" stop-color="#C8640A" stop-opacity=".16"/>
+              <stop offset="100%" stop-color="#6B2800" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="ambertop2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"  stop-color="#FFF4CC" stop-opacity=".92"/>
+              <stop offset="60%" stop-color="#F5A623" stop-opacity=".85"/>
+              <stop offset="100%" stop-color="#C8640A" stop-opacity=".95"/>
+            </linearGradient>
+            <linearGradient id="messing2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%"  stop-color="#8B6914"/>
+              <stop offset="40%" stop-color="#D4A82A"/>
+              <stop offset="70%" stop-color="#A07820"/>
+              <stop offset="100%" stop-color="#6B4F10"/>
+            </linearGradient>
+            <linearGradient id="messingV2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"  stop-color="#C49A20"/>
+              <stop offset="50%" stop-color="#8B6914"/>
+              <stop offset="100%" stop-color="#5A4010"/>
+            </linearGradient>
+            <linearGradient id="bundel2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"  stop-color="#FFD580" stop-opacity=".2"/>
+              <stop offset="100%" stop-color="#FFD580" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="80" cy="90" rx="72" ry="58" fill="url(#gloed2)" opacity=".9"/>
+          <path d="M52 118 L20 210 L140 210 L108 118 Z" fill="url(#bundel2)"/>
+          <ellipse cx="28" cy="80" rx="13" ry="38" fill="url(#messingV2)" stroke="#5A3E0A" stroke-width="1.2"/>
+          <ellipse cx="28" cy="80" rx="9" ry="28" fill="none" stroke="#C49A20" stroke-width=".8" opacity=".6"/>
+          <circle cx="28" cy="46" r="5" fill="url(#messing2)" stroke="#5A3E0A" stroke-width="1"/>
+          <circle cx="28" cy="46" r="2.5" fill="#FFD580" opacity=".7"/>
+          <circle cx="28" cy="114" r="4" fill="url(#messing2)" stroke="#5A3E0A" stroke-width="1"/>
+          <rect x="28" y="77" width="22" height="7" rx="3.5" fill="url(#messing2)" stroke="#5A3E0A" stroke-width=".8"/>
+          <path d="M50 80 C62 80, 70 88, 70 100 C70 112, 62 118, 55 118" stroke="url(#messing2)" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <path d="M50 80 C62 80, 70 88, 70 100 C70 112, 62 118, 55 118" stroke="#C49A20" stroke-width="3" stroke-linecap="round" fill="none" opacity=".5"/>
+          <path d="M55 118 C50 118, 46 122, 48 126 C50 130, 56 128, 55 124" stroke="url(#messing2)" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <rect x="48" y="115" width="24" height="14" rx="4" fill="url(#messingV2)" stroke="#5A3E0A" stroke-width="1.2"/>
+          <rect x="52" y="118" width="6" height="8" rx="1.5" fill="#A07820" opacity=".7"/>
+          <rect x="62" y="118" width="6" height="8" rx="1.5" fill="#A07820" opacity=".7"/>
+          <path d="M44 118 Q60 122 76 118 L78 126 Q60 132 42 126 Z" fill="#C8640A" stroke="#8B3E00" stroke-width=".8"/>
+          <path d="M42 126 Q38 108, 40 94 Q45 78, 60 74 Q75 78, 80 94 Q82 108, 78 126 Z" fill="url(#ambertop2)" stroke="#C8640A" stroke-width="1.2"/>
+          <line x1="50" y1="76" x2="46" y2="124" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+          <line x1="56" y1="74" x2="54" y2="126" stroke="rgba(255,255,255,.22)" stroke-width="1.2"/>
+          <line x1="62" y1="74" x2="62" y2="126" stroke="rgba(255,255,255,.18)" stroke-width="1.2"/>
+          <line x1="68" y1="75" x2="70" y2="125" stroke="rgba(255,255,255,.15)" stroke-width="1.2"/>
+          <path d="M43 105 Q44 95 46 88" stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-linecap="round"/>
+          <ellipse cx="60" cy="105" rx="7" ry="9" fill="#FFF0A0" opacity=".75"/>
+          <ellipse cx="60" cy="105" rx="3.5" ry="4.5" fill="#FFFFFF" opacity=".6"/>
+          <ellipse cx="60" cy="74" rx="20" ry="5" fill="#3A1800" stroke="#C8640A" stroke-width="1"/>
+          <ellipse cx="60" cy="74" rx="16" ry="3.5" fill="#FFE080" opacity=".4"/>
+          <ellipse cx="60" cy="60" rx="30" ry="18" fill="#FFD580" opacity=".12"/>
+        </svg>
       </div>
 
-      <!-- meer foto's van de avond -->
-      <div class="fotos-titel">meer foto's van de avond</div>
-      <div class="fotos-grid">
-        <div class="foto-wrap" style="--r:1.2deg">
-          <div class="foto-slot">
-            <!-- <img src="afbeeldingen/sep23-foto-2.jpg" alt="Foto 2 — 23 september"> -->
-            <span class="ph-icon">📷</span><span class="ph-label">sep23-foto-2.jpg</span>
+      <h2 class="avond-datum">Woensdag 23 september</h2>
+
+      <!-- tekst links, foto rechts -->
+      <div class="avond-rij foto-rechts">
+        <div class="avond-tekst">
+          <p>De tweede tekenavond was weer gezellig! Dit keer kwamen er 13 tekenaars opdagen — iets meer dan de eerste keer, en dat voelde goed. Er hing meteen die vertrouwde rust van potlood op papier, het zachte gekrabbel, iemand die z'n gum zoekt.</p>
+          <p>Wat me opvalt is dat iedereen z'n eigen wereld mee naar de tafel brengt. De één tekent architectuur, de ander dieren, weer iemand anders pakt een gezicht aan. Niemand vraagt wat het moet voorstellen — dat is precies de vrijheid die ik voor ogen had toen ik dit begon.</p>
+        </div>
+        <div class="avond-foto-wrap" style="--r:-1.5deg">
+          <div class="avond-foto-slot">
+            <!-- <img src="afbeeldingen/sep23-foto-1.jpg" alt="23 september"> -->
+            <span class="ph-icon">📷</span>
+            <span class="ph-label">sep23-foto-1.jpg</span>
           </div>
         </div>
+      </div>
+
+      <!-- foto links, tekst rechts -->
+      <div class="avond-rij foto-links">
+        <div class="avond-foto-wrap" style="--r:1.2deg">
+          <div class="avond-foto-slot">
+            <!-- <img src="afbeeldingen/sep23-foto-2.jpg" alt="23 september"> -->
+            <span class="ph-icon">📷</span>
+            <span class="ph-label">sep23-foto-2.jpg</span>
+          </div>
+        </div>
+        <div class="avond-tekst">
+          <p>De avond vloog voorbij. Om 22:00 zaten we er nog steeds, niemand stond op. Dat is voor mij het teken dat het klopt.</p>
+          <p>Er zijn ook een paar tekeningen achtergelaten op het prikbord — prachtig werk van mensen die ik nog niet kende. Volgende keer meer ruimte daarvoor.</p>
+        </div>
+      </div>
+
+      <!-- extra foto's onderaan -->
+      <div class="fotos-titel">meer foto's van de avond</div>
+      <div class="fotos-grid">
         <div class="foto-wrap" style="--r:-0.8deg">
           <div class="foto-slot">
-            <!-- <img src="afbeeldingen/sep23-foto-3.jpg" alt="Foto 3 — 23 september"> -->
+            <!-- <img src="afbeeldingen/sep23-foto-3.jpg" alt="Foto 3"> -->
             <span class="ph-icon">📷</span><span class="ph-label">sep23-foto-3.jpg</span>
           </div>
         </div>
         <div class="foto-wrap" style="--r:1.8deg">
           <div class="foto-slot">
-            <!-- <img src="afbeeldingen/sep23-foto-4.jpg" alt="Foto 4 — 23 september"> -->
+            <!-- <img src="afbeeldingen/sep23-foto-4.jpg" alt="Foto 4"> -->
             <span class="ph-icon">📷</span><span class="ph-label">sep23-foto-4.jpg</span>
           </div>
         </div>
         <div class="foto-wrap" style="--r:-1.1deg">
           <div class="foto-slot">
-            <!-- <img src="afbeeldingen/sep23-foto-5.jpg" alt="Foto 5 — 23 september"> -->
+            <!-- <img src="afbeeldingen/sep23-foto-5.jpg" alt="Foto 5"> -->
             <span class="ph-icon">📷</span><span class="ph-label">sep23-foto-5.jpg</span>
           </div>
         </div>
         <div class="foto-wrap" style="--r:0.7deg">
           <div class="foto-slot">
-            <!-- <img src="afbeeldingen/sep23-foto-6.jpg" alt="Foto 6 — 23 september"> -->
+            <!-- <img src="afbeeldingen/sep23-foto-6.jpg" alt="Foto 6"> -->
             <span class="ph-icon">📷</span><span class="ph-label">sep23-foto-6.jpg</span>
           </div>
         </div>
@@ -171,31 +227,22 @@
     <!-- ---- Avond 1: 19 augustus 2026 ---- -->
     <article class="avond-kaart" id="avond-aug19">
 
-      <header class="avond-header">
-        <div class="avond-header-tekst">
-          <h2 class="avond-datum">Op een zwoelige woensdagavond <span class="datum-accent">19 augustus</span></h2>
-          <p class="avond-subtitel">De allereerste tekenavond — 2026</p>
-          <div class="avond-badges">
-            <span class="badge b-coral">de eerste keer</span>
-            <span class="badge b-teal">24 tekenaars</span>
-            <span class="badge b-teal">café 't Weesperplein</span>
-          </div>
-        </div>
-        <div class="avond-header-foto">
-          <div class="foto-wrap" style="--r:-1deg">
-            <div class="foto-slot foto-slot-breed">
-              <!-- <img src="afbeeldingen/eerste-avond.png" alt="De eerste tekenavond — 19 augustus"> -->
-              <span class="ph-icon">📷</span>
-              <span class="ph-label">eerste-avond.png</span>
-            </div>
-          </div>
-        </div>
-      </header>
+      <h2 class="avond-datum">Op een zwoelige woensdagavond <span class="datum-accent">19 augustus</span></h2>
 
-      <div class="avond-tekst">
-        <p>De allereerste tekenavond was een succes! 🍀 Maar liefst 24 tekenliefhebbers kwamen opdagen — niet wetend hoeveel mensen er zouden komen, of het zou klikken, of de sfeer goed zou zijn. Gewoon beginnen.</p>
-        <p>Het werd meteen precies wat ik gehoopt had. Mensen die elkaar niet kenden schoven samen aan tafel en begonnen te tekenen. Geen cursus, geen opdracht, gewoon doen. Aan het einde van de avond had iedereen iets gemaakt en was er volop gepraat over van alles — over tekenen, over Weesp, over het leven.</p>
-        <p>Dit is het begin van iets moois.</p>
+      <!-- foto links, tekst rechts -->
+      <div class="avond-rij foto-links">
+        <div class="avond-foto-wrap" style="--r:-1deg">
+          <div class="avond-foto-slot">
+            <!-- <img src="afbeeldingen/eerste-avond.png" alt="De eerste tekenavond"> -->
+            <span class="ph-icon">📷</span>
+            <span class="ph-label">eerste-avond.png</span>
+          </div>
+        </div>
+        <div class="avond-tekst">
+          <p>De allereerste tekenavond was een succes! 🍀 Maar liefst 24 tekenliefhebbers kwamen opdagen — niet wetend hoeveel mensen er zouden komen, of het zou klikken, of de sfeer goed zou zijn. Gewoon beginnen.</p>
+          <p>Het werd meteen precies wat ik gehoopt had. Mensen die elkaar niet kenden schoven samen aan tafel en begonnen te tekenen. Geen cursus, geen opdracht, gewoon doen.</p>
+          <p>Aan het einde van de avond had iedereen iets gemaakt en was er volop gepraat over van alles — over tekenen, over Weesp, over het leven. Dit is het begin van iets moois.</p>
+        </div>
       </div>
 
     </article>

@@ -386,10 +386,9 @@
   }
 
   /* ================================================================
-   AVONDEN-PAGINA
+   AVONDEN-PAGINA  (avonden.html — wordt gedeeld met index.html)
    ================================================================ */
 
-/* ---- kleur-tokens voor de avondenpagina ---- */
 :root{
   --Weesperblauw:#0036A7;
   --cafe-dark:#1A0D05;
@@ -403,7 +402,6 @@
   --tekst-zacht:rgba(232,220,200,.6);
 }
 
-/* ---- muurachtergrond: warm licht bovenin, loopt naar diep donker ---- */
 body.avonden-pagina{
   background:
     radial-gradient(ellipse 80% 55% at 50% 0%, #6B3A1F 0%, #3A1C0A 40%, #1A0A04 70%, #0D0503 100%);
@@ -414,41 +412,31 @@ body.avonden-pagina::before{
   content:"";
   position:fixed;inset:0;z-index:0;pointer-events:none;
   background:
-    repeating-linear-gradient(
-      180deg,
-      transparent 0 3px,
-      rgba(255,255,255,.006) 3px 4px,
-      transparent 4px 18px
-    ),
-    repeating-linear-gradient(
-      92deg,
-      transparent 0 80px,
-      rgba(255,255,255,.005) 80px 81px
-    );
+    repeating-linear-gradient(180deg, transparent 0 3px, rgba(255,255,255,.006) 3px 4px, transparent 4px 18px),
+    repeating-linear-gradient(92deg, transparent 0 80px, rgba(255,255,255,.005) 80px 81px);
 }
 
-/* ---- wrap op de avondenpagina ---- */
 body.avonden-pagina .wrap{max-width:1000px}
 
-/* ---- terugknop: uiterste linkerbovenhoek ---- */
+/* ---- terugknop: uiterste linkerbovenhoek, transparant ---- */
 .terug-btn{
   position:fixed;
   top:16px;left:16px;
   z-index:100;
   font-family:"Shantell Sans","Patrick Hand",cursive;font-size:.95rem;font-weight:300;
-  border:2px solid rgba(245,200,66,.4);
-  background:rgba(26,13,5,.7);
+  border:1.5px solid rgba(245,200,66,.35);
+  background:rgba(255,255,255,.07);
   color:var(--tekst-warm);
   padding:7px 14px;border-radius:12px;
-  backdrop-filter:blur(6px);
-  box-shadow:2px 2px 0 rgba(0,0,0,.4);
-  transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  box-shadow:none;
+  transition:background .14s ease, border-color .14s ease;
   text-decoration:none;display:inline-block;
 }
 .terug-btn:hover{
-  transform:translate(-2px,-2px);
-  box-shadow:4px 4px 0 rgba(0,0,0,.4);
-  background:rgba(245,200,66,.15);
+  background:rgba(255,255,255,.13);
+  border-color:rgba(245,200,66,.6);
 }
 
 /* ---- datum-navigatie rechtsboven ---- */
@@ -460,262 +448,219 @@ body.avonden-pagina .wrap{max-width:1000px}
   max-width:calc(100vw - 180px);
 }
 .datum-nav-label{
-  font-family:"Patrick Hand",cursive;
-  font-size:.78rem;
-  color:var(--tekst-zacht);
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  margin-right:2px;
+  font-family:"Patrick Hand",cursive;font-size:.78rem;
+  color:var(--tekst-zacht);text-transform:uppercase;letter-spacing:.08em;margin-right:2px;
 }
 .datum-chip{
   font-family:"Patrick Hand",cursive;font-size:.88rem;
-  background:rgba(26,13,5,.7);
-  border:1.5px solid rgba(245,200,66,.3);
+  background:rgba(255,255,255,.06);
+  border:1.5px solid rgba(245,200,66,.25);
   color:var(--tekst-warm);
   padding:5px 11px;border-radius:20px;
   text-decoration:none;
   backdrop-filter:blur(6px);
-  transition:background .14s ease, border-color .14s ease, color .14s ease;
+  -webkit-backdrop-filter:blur(6px);
+  transition:background .14s ease, border-color .14s ease;
   white-space:nowrap;
 }
-.datum-chip:hover{
-  background:rgba(245,200,66,.18);
-  border-color:rgba(245,200,66,.65);
-}
-.datum-chip.actief{
-  background:rgba(245,200,66,.2);
-  border-color:var(--lamp-dim);
-  color:var(--lamp);
-}
-.datum-chip.toekomst{
-  opacity:.4;
-  cursor:default;
-  pointer-events:none;
-}
-@media(max-width:640px){
-  .datum-nav{display:none}
-}
+.datum-chip:hover{background:rgba(245,200,66,.15);border-color:rgba(245,200,66,.55)}
+.datum-chip.actief{background:rgba(245,200,66,.18);border-color:var(--lamp-dim);color:var(--lamp)}
+.datum-chip.toekomst{opacity:.35;cursor:default;pointer-events:none}
+@media(max-width:640px){.datum-nav{display:none}}
 
-/* ---- muurlamp decoratie (gecentreerd bovenaan) ---- */
-.muurlamp-wrap{
-  text-align:center;
-  padding:72px 0 0;
-  position:relative;z-index:1;
-}
-.muurlamp-wrap svg{
-  filter:drop-shadow(0 0 22px rgba(245,180,50,.6)) drop-shadow(0 0 50px rgba(245,140,20,.3));
-}
-
-/* ---- paginatitel ---- */
-.pagina-titel{
-  text-align:center;
-  padding:0 0 10px;
+/* ---- paginakop: lamp rechts naast de titel ---- */
+.pagina-kop{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(16px,4vw,40px);
+  padding:80px 0 0;
   position:relative;z-index:1;
 }
 .pagina-titel h1{
   font-family:"Caveat",cursive;font-weight:700;
-  font-size:clamp(3.2rem,10vw,6rem);
+  font-size:clamp(2.6rem,7vw,4.2rem);
   margin:0;
   color:var(--lamp);
-  text-shadow:0 0 30px rgba(245,200,66,.4);
+  text-shadow:0 0 24px rgba(245,200,66,.35);
+  line-height:1;
 }
-.pagina-titel .sub{
-  font-family:"Patrick Hand",cursive;
-  font-size:1.1rem;
-  color:var(--tekst-zacht);
-  margin:4px 0 0;
+.muurlamp-wrap{
+  flex:0 0 auto;
+  position:relative;z-index:1;
+  line-height:0;
+}
+.muurlamp-wrap svg{
+  width:100px;height:auto;
+  filter:drop-shadow(0 0 18px rgba(245,180,50,.6)) drop-shadow(0 0 40px rgba(245,140,20,.3));
+}
+@media(max-width:480px){
+  .pagina-kop{flex-direction:column;gap:8px;padding-top:64px}
+  .muurlamp-wrap svg{width:72px}
 }
 
 /* ---- decoratieve lijn ---- */
 .divider{
-  display:block;width:min(340px,70vw);height:3px;
+  display:block;width:min(300px,60vw);height:2px;
   background:linear-gradient(90deg, transparent, var(--lamp), transparent);
-  margin:0 auto 48px;
-  opacity:.4;
+  margin:16px auto 48px;
+  opacity:.35;
   position:relative;z-index:1;
 }
 
 /* ================================================================
-   AVOND-KAART — twee-kolom layout: tekst links, foto rechts
+   AVOND-KAART
    ================================================================ */
 .avond-kaart{
   background:var(--kaart-bg);
   border:1.5px solid var(--kaart-rand);
   border-radius:20px;
   box-shadow:
-    0 0 0 1px rgba(245,200,66,.06),
+    0 0 0 1px rgba(245,200,66,.05),
     0 8px 32px rgba(0,0,0,.55),
-    0 0 80px rgba(0,0,0,.25);
+    0 0 80px rgba(0,0,0,.2);
   padding:clamp(28px,5vw,52px);
-  margin-bottom:60px;
+  margin-bottom:64px;
   position:relative;z-index:1;
   color:var(--tekst-warm);
-  /* geen ::before meer — geen plakband */
 }
 
-/* header: datum+tekst links, grote foto rechts */
-.avond-header{
-  display:grid;
-  grid-template-columns:1fr minmax(220px,38%);
-  gap:clamp(24px,4vw,48px);
-  align-items:start;
-  margin-bottom:28px;
+/* zijlamp naast de kaart (buiten het vlak) */
+.zijlamp{
+  position:absolute;
+  left:-90px;
+  top:28px;
+  z-index:2;
+  pointer-events:none;
 }
-@media(max-width:680px){
-  .avond-header{
-    grid-template-columns:1fr;
-  }
-  .avond-header-foto{
-    order:-1; /* foto bovenaan op smal scherm */
-  }
+.zijlamp svg{
+  width:80px;height:auto;
+  filter:drop-shadow(0 0 12px rgba(245,180,50,.5)) drop-shadow(0 0 26px rgba(200,100,10,.22));
 }
+@media(max-width:1080px){.zijlamp{display:none}}
 
+/* ---- kaart-datum titel ---- */
 .avond-datum{
   font-family:"Caveat",cursive;font-weight:700;
-  font-size:clamp(2rem,5.5vw,3.2rem);
-  color:var(--lamp);
-  margin:0 0 6px;
-  line-height:1.15;
-  text-shadow:0 0 20px rgba(245,200,66,.3);
+  font-size:clamp(1.9rem,5vw,2.8rem);
+  color:#F0922B;   /* oranjiger dan de gele lamp-kleur */
+  margin:0 0 24px;
+  line-height:1.2;
 }
-.datum-accent{
-  color:var(--coral);
+.datum-accent{color:var(--coral)}
+
+/* ---- tekst-foto rij: afwisselend links/rechts ---- */
+.avond-rij{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(20px,4vw,44px);
+  align-items:start;
+  margin-bottom:32px;
 }
-.avond-subtitel{
-  font-family:"Patrick Hand",cursive;
-  font-size:1rem;
-  color:var(--tekst-zacht);
-  margin:0 0 18px;
-}
-.avond-kaart hr{
-  border:none;
-  border-top:1px solid rgba(245,200,66,.12);
-  margin:20px 0 24px;
+.avond-rij.foto-rechts .avond-tekst{order:1}
+.avond-rij.foto-rechts .avond-foto-wrap{order:2}
+.avond-rij.foto-links  .avond-foto-wrap{order:1}
+.avond-rij.foto-links  .avond-tekst{order:2}
+
+@media(max-width:660px){
+  .avond-rij{grid-template-columns:1fr}
+  .avond-rij .avond-foto-wrap{order:0 !important}
+  .avond-rij .avond-tekst{order:1 !important}
 }
 
-/* tekst loopt breed over de kaart */
+/* ---- tekst ---- */
 .avond-tekst{
   font-size:1.05rem;
   line-height:1.82;
   color:var(--tekst-warm);
-  max-width:none; /* volledige breedte */
 }
-.avond-tekst p{margin:0 0 1.2em}
+.avond-tekst p{margin:0 0 1.1em}
 .avond-tekst p:last-child{margin-bottom:0}
 
-/* foto rechts in de header */
-.avond-header-foto{
-  position:relative;
-}
-
-/* ---- ansichtkaart-foto wrapper ---- */
-.foto-wrap{
-  position:relative;
-  transform:rotate(var(--r, 0deg));
-  transition:transform .22s ease, box-shadow .22s ease;
-  background:#1e1008;
-  padding:8px 8px 28px 8px;
+/* ---- passepartout foto ---- */
+.avond-foto-wrap{
+  background:#EDE8D8;           /* crème passepartout */
+  padding:14px 14px 36px 14px;  /* breed onderaan voor onderschrift-ruimte */
   border-radius:3px;
   box-shadow:
-    0 2px 8px rgba(0,0,0,.5),
-    0 8px 24px rgba(0,0,0,.4),
-    inset 0 0 0 1px rgba(245,200,66,.08);
+    0 4px 14px rgba(0,0,0,.55),
+    0 1px 4px rgba(0,0,0,.4);
+  transform:rotate(var(--r, 0deg));
+  transition:transform .22s ease, box-shadow .22s ease;
+  position:relative;
 }
-.foto-wrap:hover{
-  transform:rotate(0deg) translateY(-4px) scale(1.03);
-  box-shadow:
-    0 12px 30px rgba(0,0,0,.6),
-    0 2px 8px rgba(0,0,0,.4),
-    inset 0 0 0 1px rgba(245,200,66,.15);
+.avond-foto-wrap:hover{
+  transform:rotate(0deg) translateY(-4px) scale(1.02);
+  box-shadow:0 12px 30px rgba(0,0,0,.65), 0 2px 6px rgba(0,0,0,.4);
   z-index:2;
 }
-
-/* ---- foto-slot: sepia/oud-foto effect ---- */
-.foto-slot{
-  aspect-ratio:3/4;
+.avond-foto-slot{
+  aspect-ratio:4/3;
   border-radius:2px;
   background:linear-gradient(145deg, #2a1a0a 0%, #1a0e05 100%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:8px;
-  font-family:"Patrick Hand",cursive;
-  font-size:.9rem;
-  color:rgba(245,200,66,.4);
-  position:relative;
-  overflow:hidden;
+  gap:8px;overflow:hidden;position:relative;
+  font-family:"Patrick Hand",cursive;font-size:.9rem;color:rgba(245,200,66,.4);
 }
-/* brede variant voor header-foto (liggende verhouding) */
-.foto-slot-breed{
-  aspect-ratio:4/3;
-}
-.foto-slot img{
-  width:100%;height:100%;
-  object-fit:cover;
-  display:block;
-  filter:sepia(.55) contrast(1.08) brightness(.96) saturate(.75);
+.avond-foto-slot img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:sepia(.45) contrast(1.06) brightness(.97) saturate(.8);
   transition:filter .3s ease;
 }
-.foto-slot:hover img{
-  filter:sepia(.35) contrast(1.05) brightness(.98) saturate(.85);
-}
-/* vignette overlay */
-.foto-slot::after{
-  content:"";
-  position:absolute;inset:0;
-  background:radial-gradient(ellipse at center, transparent 55%, rgba(10,5,2,.5) 100%);
+.avond-foto-slot:hover img{filter:sepia(.25) contrast(1.04) brightness(.99) saturate(.9)}
+.avond-foto-slot::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at center, transparent 55%, rgba(10,5,2,.45) 100%);
   pointer-events:none;
 }
-/* korrel overlay */
-.foto-slot::before{
-  content:"";
-  position:absolute;inset:0;z-index:1;pointer-events:none;
+.avond-foto-slot::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
-  background-size:180px 180px;
-  opacity:.55;
-  mix-blend-mode:multiply;
+  background-size:180px 180px;opacity:.5;mix-blend-mode:multiply;
 }
-.foto-slot .ph-icon{font-size:2rem;opacity:.3;filter:sepia(1)}
-.foto-slot .ph-label{text-align:center;padding:0 10px;opacity:.35;font-size:.82rem}
+.avond-foto-slot .ph-icon{font-size:2rem;opacity:.3;filter:sepia(1)}
+.avond-foto-slot .ph-label{text-align:center;padding:0 10px;opacity:.35;font-size:.82rem}
 
-/* ---- fotogalerij onderaan de kaart ---- */
+/* ---- extra fotogalerij onderaan ---- */
 .fotos-titel{
-  font-family:"Patrick Hand",cursive;
-  font-size:.9rem;
-  color:var(--tekst-zacht);
-  margin:32px 0 14px;
-  text-transform:uppercase;
-  letter-spacing:.07em;
+  font-family:"Patrick Hand",cursive;font-size:.9rem;
+  color:var(--tekst-zacht);margin:32px 0 14px;
+  text-transform:uppercase;letter-spacing:.07em;
 }
 .fotos-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill, minmax(160px,1fr));
   gap:14px;
 }
+/* kleine foto's in de grid ook passepartout */
+.foto-wrap{
+  background:#EDE8D8;
+  padding:8px 8px 24px 8px;
+  border-radius:3px;
+  box-shadow:0 3px 10px rgba(0,0,0,.5), 0 1px 3px rgba(0,0,0,.35);
+  transform:rotate(var(--r, 0deg));
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.foto-wrap:hover{
+  transform:rotate(0deg) translateY(-4px) scale(1.04);
+  box-shadow:0 10px 24px rgba(0,0,0,.6), 0 2px 6px rgba(0,0,0,.4);
+  z-index:2;
+}
+.foto-slot{
+  aspect-ratio:3/4;border-radius:2px;
+  background:linear-gradient(145deg, #2a1a0a 0%, #1a0e05 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;overflow:hidden;position:relative;
+  font-family:"Patrick Hand",cursive;font-size:.9rem;color:rgba(245,200,66,.4);
+}
+.foto-slot img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.45) contrast(1.06) brightness(.97) saturate(.8)}
+.foto-slot::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center, transparent 55%, rgba(10,5,2,.45) 100%);pointer-events:none}
+.foto-slot::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");background-size:180px 180px;opacity:.5;mix-blend-mode:multiply}
+.foto-slot .ph-icon{font-size:2rem;opacity:.3;filter:sepia(1)}
+.foto-slot .ph-label{text-align:center;padding:0 10px;opacity:.35;font-size:.82rem}
 
-/* ---- avond-badge ---- */
-.avond-badges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 0}
-.badge{
-  font-family:"Patrick Hand",cursive;font-size:.9rem;
-  background:rgba(26,13,5,.6);
-  border:1.5px solid rgba(245,200,66,.2);
-  border-radius:20px;
-  padding:3px 12px;
-  color:var(--tekst-warm);
-  box-shadow:none;
-}
-.badge.b-coral{
-  border-color:rgba(232,84,62,.5);
-  color:var(--coral);
-}
-.badge.b-teal{
-  border-color:rgba(47,163,154,.4);
-  color:var(--teal);
-}
-
-/* ---- footer (avondenpagina) ---- */
-body.avonden-pagina footer{
-  color:rgba(232,220,200,.35);
-  padding:20px 0 60px;
-}
+/* ---- footer ---- */
+body.avonden-pagina footer{color:rgba(232,220,200,.35);padding:20px 0 60px}
 body.avonden-pagina footer a{color:var(--lamp);text-decoration:none;opacity:.7}
 body.avonden-pagina footer a:hover{opacity:1;text-decoration:underline}
 
@@ -725,9 +670,7 @@ body.avonden-pagina footer a:hover{opacity:1;text-decoration:underline}
 .avond-kaart:nth-child(1){animation-delay:.08s}
 .avond-kaart:nth-child(2){animation-delay:.2s}
 
-/* ---- mobiel ---- */
 @media(max-width:540px){
   .fotos-grid{grid-template-columns:repeat(2,1fr);gap:10px}
   body.avonden-pagina .avond-kaart{padding:20px 16px 28px}
-  .muurlamp-wrap{padding-top:64px}
 }
