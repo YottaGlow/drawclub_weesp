@@ -660,6 +660,7 @@ body.avonden-pagina .wrap{max-width:1400px}
 .foto-slot{
   aspect-ratio:3/4;
   height: auto;
+  width: auto;
   object-fit:unset;
   border-radius:2px;
   background:linear-gradient(145deg, #2a1a0a 0%, #1a0e05 100%);
