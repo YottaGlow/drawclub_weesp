@@ -611,6 +611,7 @@ body.avonden-pagina .wrap{max-width:1400px}
   font-family:"Patrick Hand",cursive;font-size:.9rem;color:rgba(245,200,66,.4);
 }
 .avond-foto-slot img {
+  aspect-ratio:3/4;
   height: auto;
   object-fit: unset;
   display: block;
