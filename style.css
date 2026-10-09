@@ -609,10 +609,13 @@ body.avonden-pagina .wrap{max-width:1400px}
   gap:8px;overflow:hidden;position:relative;
   font-family:"Patrick Hand",cursive;font-size:.9rem;color:rgba(245,200,66,.4);
 }
-.avond-foto-slot img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  filter:sepia(.45) contrast(1.06) brightness(.97) saturate(.8);
-  transition:filter .3s ease;
+.avond-foto-slot img {
+  width: 100%;
+  height: auto;
+  object-fit: unset;
+  display: block;
+  filter: sepia(.45) contrast(1.06) brightness(.97) saturate(.8);
+  transition: filter .3s ease;
 }
 .avond-foto-slot:hover img{filter:sepia(.25) contrast(1.04) brightness(.99) saturate(.9)}
 .avond-foto-slot::after{
@@ -627,6 +630,7 @@ body.avonden-pagina .wrap{max-width:1400px}
 }
 .avond-foto-slot .ph-icon{font-size:2rem;opacity:.3;filter:sepia(1)}
 .avond-foto-slot .ph-label{text-align:center;padding:0 10px;opacity:.35;font-size:.82rem}
+
 
 /* ---- extra fotogalerij onderaan ---- */
 .fotos-titel{
