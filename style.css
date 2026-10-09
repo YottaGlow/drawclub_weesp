@@ -416,7 +416,7 @@ body.avonden-pagina::before{
     repeating-linear-gradient(92deg, transparent 0 80px, rgba(255,255,255,.005) 80px 81px);
 }
 
-body.avonden-pagina .wrap{max-width:1200px}
+body.avonden-pagina .wrap{max-width:1400px}
 
 /* ---- terugknop: uiterste linkerbovenhoek, transparant ---- */
 .terug-btn{
@@ -579,7 +579,7 @@ body.avonden-pagina .wrap{max-width:1200px}
 
 /* ---- passepartout foto ---- */
 .avond-foto-wrap{
-  background:linear-gradient(145deg, #3A2510 0%, #2A1A0A 40%, #1E1208 70%, #2E1A0C 100%);         /* crème passepartout */
+  background:linear-gradient(145deg, #cb9771 0%, #2A1A0A 40%, #A07759 70%, #79451f 100%);         /* crème passepartout */
   padding:14px 14px 36px 14px;  /* breed onderaan voor onderschrift-ruimte */
   border-radius:3px;
   box-shadow:
