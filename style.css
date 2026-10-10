@@ -386,8 +386,8 @@
   }
 
   /* ================================================================
-   AVONDEN-PAGINA  (avonden.html — wordt gedeeld met index.html)
-   ================================================================ */
+    AVONDEN-PAGINA  (avonden.html — wordt gedeeld met index.html)
+   ================================================================ */ 
 
 :root{
   --Weesperblauw:#0036A7;
@@ -528,6 +528,7 @@ body.avonden-pagina .wrap { max-width: 1400px; }
   background-image: url('afbeeldingen/licht_houtframe.png');
   background-size: 100% auto;
   background-repeat: repeat-y;
+  background-color: transparent;
 }
 
 /* zijlamp naast de kaart (buiten het vlak) */
