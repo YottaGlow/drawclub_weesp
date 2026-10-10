@@ -408,15 +408,21 @@ body.avonden-pagina{
   color:var(--tekst-warm);
   line-height:1.7;
 }
-body.avonden-pagina::before{
-  content:"";
-  position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    repeating-linear-gradient(180deg, transparent 0 3px, rgba(255,255,255,.006) 3px 4px, transparent 4px 18px),
-    repeating-linear-gradient(92deg, transparent 0 80px, rgba(255,255,255,.005) 80px 81px);
+body.avonden-pagina {
+  background-image: url('afbeeldingen/donker_hout.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--tekst-warm);
+  line-height: 1.7;
+}
+body.avonden-pagina::before {
+  display: none;
 }
 
-body.avonden-pagina .wrap{max-width:1400px}
+body.avonden-pagina .wrap { max-width: 1400px; }
+
+
 
 /* ----- alinea kop ----- */
 .alinea-kop{
@@ -518,18 +524,10 @@ body.avonden-pagina .wrap{max-width:1400px}
 /* ================================================================
    AVOND-KAART
    ================================================================ */
-.avond-kaart{
-  background:var(--kaart-bg);
-  border:1.5px solid var(--kaart-rand);
-  border-radius:20px;
-  box-shadow:
-    0 0 0 1px rgba(245,200,66,.05),
-    0 8px 32px rgba(0,0,0,.55),
-    0 0 80px rgba(0,0,0,.2);
-  padding:clamp(28px,5vw,52px);
-  margin-bottom:64px;
-  position:relative;z-index:1;
-  color:#170A04;
+.avond-kaart {
+  background-image: url('afbeeldingen/licht_houtframe.png');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
 }
 
 /* zijlamp naast de kaart (buiten het vlak) */
